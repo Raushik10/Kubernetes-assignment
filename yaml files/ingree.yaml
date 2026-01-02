@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: assignment
+  labels:
+    app.kubernetes.io/name: assignment
+spec:
+  rules:
+  - host: assignment.ml
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: assignment-frontend
+            port: 
+              number: 80
+  - host: assignment.backend.ml
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: assignment-backend
+            port:
+              number: 80             
