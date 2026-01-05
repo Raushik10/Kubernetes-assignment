@@ -8,4 +8,4 @@ YAML FILES:-
 
 1. frontend.yaml :- To deploy frontend container in kubernetes cluster.
 2. backend.yaml :- To deploy backend container in kubernetes cluster. It contains the PV and PVC also so, even though the pods gets deleted the data won't be lost.
-3. ingress.yaml :- to deploy ingress through which we can access the application.
+3. ingree.yaml :- to deploy ingress through which we can access the application.
